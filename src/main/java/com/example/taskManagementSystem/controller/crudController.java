@@ -44,6 +44,12 @@ public class crudController {
         return ser.Getall();
     }
 
+    @GetMapping("/admin")
+    public String admin() {
+        return "Admin";
+    }
+    
+
     @GetMapping("/login/{id}")
     public Optional<AuthData> getIdMethodName(@PathVariable Long id) {
         return ser.GetById(id);
